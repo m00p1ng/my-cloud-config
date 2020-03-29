@@ -1,0 +1,15 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+package_reboot_if_required: true
+packages:
+  - deluged
+  - deluge-web
+
+users:
+  - name: mooping
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDyCFQWiXHO4wmsrynv8eyYkC7GS3WgaS0FUklXQtSeGzwWdFnrSsQUz2iDlXwP5Q+8WWQkz9y/zhwN1Htm0bIt12JfunoqN0H9YRPaYmlsgVW1EfHomHP5rtCjUqldZQD5ktg4HEZ/4/7co6RPn1OUIo9Cf1YUn3aa4RHrVweZ821vtI9G8/Lbl8/JjWwk1bwo2Mspc5XJqfWXd4UKGSUYLTiYZb/CUDnW7pE5nVkc3F+DSvRmCO6G4iTUEUCytnnE88JVaHdMi4QzgMUQtXEI03mpOUICTNF+3DJ8iEIFaPbTZGQxriGiJEvBR3+EVwuS36wAl0hv/z9LZSReMUjZ UnnamE@UnnamEs-MacBook-Pro.local
